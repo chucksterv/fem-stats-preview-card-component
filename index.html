@@ -11,11 +11,25 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Title -->
     <title>Stats Card</title>
   </head>
   <body>
     <main class="card">
+      <div class="card__img">
+        <picture>
+          <img src="images/image-header-mobile.jpg" alt="" />
+        </picture>
+      </div>
       <div class="card__content">
         <h1>
           Get <span class="color-magenta">insights</span> that help your
@@ -26,18 +40,17 @@
           regarding revenue, customer experience, and overall efficiency.
         </p>
         <ul class="card__stats">
-          <li class="stat-item">
-            <span class="stat-numeral">10k+</span>companies
+          <li class="card__stat-item">
+            <span class="card__stats-numeral">10k+</span>companies
           </li>
-          <li class="stat-item">
-            <span class="stat-numeral">314</span>templates
+          <li class="card__stat-item">
+            <span class="card__stats-numeral">314</span>templates
           </li>
-          <li class="stat-item">
-            <span class="stat-numeral">12m+</span>queries
+          <li class="card__stat-item">
+            <span class="card__stats-numeral">12m+</span>queries
           </li>
         </ul>
       </div>
-      <div class="card__img"></div>
     </main>
   </body>
 </html>

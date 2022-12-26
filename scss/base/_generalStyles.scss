@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+body {
+  background-color: $clr--primary-blue-400;
+  display: grid;
+  place-content: center;
+
+  color: $clr--neutral-300;
+  font-size: $fs-regular;
+  font-weight: $fw-regular;
+  font-family: $ff-regular;
+}
+
+h1 {
+  font-family: $ff-headings;
+  font-weight: $fw-bold;
+  text-align: center;
+  font-size: $fs-headings;
+  color: $clr--neutral-400;
+}
