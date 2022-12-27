@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.card__stats-numeral {
+  display: block;
+  font-family: $ff-headings;
+  font-weight: $fw-bold;
+  font-size: $fs-numerals;
+  color: $clr--neutral-400;
+  text-transform: none;
+}

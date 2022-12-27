@@ -2,9 +2,23 @@
 
 .card {
   display: grid;
-  width: min(100% - 3rem, 800px);
+  width: min(100% - 3.5rem, 800px);
   margin-inline: auto;
   background-color: $clr--primary-blue-300;
   border-radius: 0.5rem;
   overflow: hidden;
+
+  &__img {
+    background-color: $clr--primary-blue-200;
+
+    img {
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__content {
+    padding: 2.5rem 2rem 1.5rem;
+    display: grid;
+    row-gap: 1.1rem;
+  }
 }

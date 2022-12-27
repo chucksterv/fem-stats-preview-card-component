@@ -12,9 +12,16 @@ body {
 }
 
 h1 {
+  text-align: center;
+  line-height: 1.1;
+
+  color: $clr--neutral-400;
   font-family: $ff-headings;
   font-weight: $fw-bold;
-  text-align: center;
   font-size: $fs-headings;
-  color: $clr--neutral-400;
+}
+
+p {
+  text-align: center;
+  line-height: 1.65;
 }
