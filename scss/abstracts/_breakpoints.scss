@@ -1,0 +1,11 @@
+@use "functions" as *;
+
+$breakpoints: (
+  sm: em(710),
+  lg: em(1136),
+);
+
+/* 
+    md: 50em,
+    lg: 65em,
+*/

@@ -1,0 +1,15 @@
+@use "sass:math";
+
+/*
+  The following two functions are used to convert pixel values to rem and em values.
+  Only intended to be used in instances where designs call for very specific px values that are non-standard.
+  Please use rem and em values by default where possible without using this as a conversion tool.
+*/
+//Converts px to rem
+@function rem($pxValue) {
+  @return #{math.div($pxValue, 16)}rem;
+}
+//Converts px to em
+@function em($pxValue) {
+  @return #{math.div($pxValue, 16)}em;
+}

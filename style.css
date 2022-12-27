@@ -75,10 +75,19 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/*
+  The following two functions are used to convert pixel values to rem and em values.
+  Only intended to be used in instances where designs call for very specific px values that are non-standard.
+  Please use rem and em values by default where possible without using this as a conversion tool.
+*/
+/* 
+    md: 50em,
+    lg: 65em,
+*/
 body {
   background-color: hsl(233deg, 47%, 7%);
   display: grid;
-  place-content: center;
+  place-items: center;
   color: hsla(0deg, 0%, 100%, 0.75);
   font-size: 0.9375rem;
   font-weight: 400;
@@ -93,16 +102,33 @@ h1 {
   font-weight: 700;
   font-size: 1.75rem;
 }
+@media screen and (min-width: 71em) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
 
 p {
   text-align: center;
   line-height: 1.65;
 }
+@media screen and (min-width: 71em) {
+  p {
+    max-width: 40ch;
+  }
+}
 
+@media screen and (min-width: 71em) {
+  h1,
+p {
+    text-align: left;
+  }
+}
 .card {
   display: grid;
-  width: min(100% - 3.5rem, 800px);
-  margin-inline: auto;
+  width: min(100% - 3.5rem, 450px);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   background-color: hsl(244deg, 38%, 16%);
   border-radius: 0.5rem;
   overflow: hidden;
@@ -118,6 +144,16 @@ p {
   display: grid;
   row-gap: 1.1rem;
 }
+@media screen and (min-width: 71em) {
+  .card {
+    width: 67.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card__content {
+    grid-row-start: 1;
+    padding: 4.5rem 3.5rem 1.5rem;
+  }
+}
 
 .card__stats {
   text-align: center;
@@ -126,11 +162,16 @@ p {
   color: hsla(0deg, 0%, 100%, 0.6);
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  gap: 1.5rem;
 }
-
-.color-magenta {
-  color: hsl(277deg, 64%, 61%);
+@media screen and (min-width: 71em) {
+  .card__stats {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    -moz-column-gap: 3.5rem;
+         column-gap: 3.5rem;
+  }
 }
 
 .card__stats-numeral {
@@ -140,4 +181,8 @@ p {
   font-size: 1.5rem;
   color: hsl(0deg, 0%, 100%);
   text-transform: none;
+}
+
+.color-magenta {
+  color: hsl(277deg, 64%, 61%);
 }/*# sourceMappingURL=style.css.map */

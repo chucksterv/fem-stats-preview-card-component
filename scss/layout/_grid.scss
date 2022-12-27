@@ -2,8 +2,9 @@
 
 .card {
   display: grid;
-  width: min(100% - 3.5rem, 800px);
-  margin-inline: auto;
+  width: min(100% - 3.5rem, 450px);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   background-color: $clr--primary-blue-300;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -20,5 +21,15 @@
     padding: 2.5rem 2rem 1.5rem;
     display: grid;
     row-gap: 1.1rem;
+  }
+
+  @include mq(lg) {
+    width: min(67.5rem);
+    grid-template-columns: 1fr 1fr;
+
+    &__content {
+      grid-row-start: 1;
+      padding: 4.5rem 3.5rem 1.5rem;
+    }
   }
 }

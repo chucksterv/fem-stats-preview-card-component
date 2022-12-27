@@ -3,7 +3,7 @@
 body {
   background-color: $clr--primary-blue-400;
   display: grid;
-  place-content: center;
+  place-items: center;
 
   color: $clr--neutral-300;
   font-size: $fs-regular;
@@ -19,9 +19,23 @@ h1 {
   font-family: $ff-headings;
   font-weight: $fw-bold;
   font-size: $fs-headings;
+
+  @include mq(lg) {
+    font-size: $fs-headings-lg;
+  }
 }
 
 p {
   text-align: center;
   line-height: 1.65;
+  @include mq(lg) {
+    max-width: 40ch;
+  }
+}
+
+@include mq(lg) {
+  h1,
+  p {
+    text-align: left;
+  }
 }
